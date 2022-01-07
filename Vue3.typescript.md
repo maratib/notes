@@ -28,8 +28,9 @@ const state = reactive({
 // (Typescript will auto detect it as string and if later we pass number into it will show error)
 setup() {
 const state = reactive({
-    name: 'Musa' 
-    age: 25 as string | number 
+    name: ref('Musa'); 
+    //age: ref(25) as string | number //will not work hence we will change it to generic type
+    age: ref<string | nummber> ref(25);
     return {
         ...toRefs(state)
     }
