@@ -32,7 +32,7 @@ const state = reactive({
     //age: ref(25) as string | number //will not work hence we will change it to generic type
     age: ref<string | nummber> ref(25);
     return {
-        ...toRefs(state)
+        name, age
     }
 
 })
